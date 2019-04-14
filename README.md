@@ -52,7 +52,7 @@ console.log(TestString[4] + TestString[5]) // 🤔
 **這邊回傳的 index 僅代表第一個unicode所在位子**
 ```
 var TestString = '🤔讓我想想🤔'
-console.log(emoji_tools.findEmoji(TestString)) // 6
+console.log(emoji_tools.findLastEmoji(TestString)) // 6
 ```
 
 * findAllEmoji (string)  
