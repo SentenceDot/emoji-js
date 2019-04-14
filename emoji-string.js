@@ -33,7 +33,7 @@ exports.findLastEmoji = function (input_string) {
     lastindex = 0
 
     while ((result = reg.exec(input_string)) !== null) {
-        lastindex = reg.lastIndex
+        lastindex = result['index']
     }
 
     return lastindex
@@ -44,7 +44,7 @@ exports.findAllEmoji = function (input_string) {
     var result, results = []
 
     while ((result = reg.exec(input_string)) !== null) {
-        results.push({ emoji: `${result[0]}`, index: reg.lastIndex })
+        results.push({ emoji: `${result[0]}`, index: `${result['index']}` })
     }
 
     return results
